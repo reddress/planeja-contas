@@ -6,8 +6,11 @@ Com essa separação de modelo e visão, é possível gerar múltiplas visões p
 
 Instalar tabelas
 
+Usar prefixo "plancont_"
+
 Remover tabelas
 
+Remover as quatro tabelas "plancont_*"
 
 Tabelas SQL
 
