@@ -19,7 +19,7 @@ criar_tabela($dbh, "plancont_usuario",
 nome varchar(64) not null,
 email varchar(80) not null,
 senha varchar(64) not null,
-constraint pk_usuario_id primary key (id, nome))
+constraint pk_usuario_id primary key (id))
 engine=InnoDB");
 
 criar_tabela($dbh, "plancont_tipo_de_conta",

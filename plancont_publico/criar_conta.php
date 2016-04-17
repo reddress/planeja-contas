@@ -1,6 +1,6 @@
 <?php
 
 require_once("cabecalho.php");
-require_once("db.php");
+require_once(__DIR__ . "/../plancont_modelos/usuario.php");
 
-println(password_hash($_POST['senha'], PASSWORD_DEFAULT));
+adicionar_usuario($dbh, $_POST['nome'], $_POST['email'], $_POST['senha']);
