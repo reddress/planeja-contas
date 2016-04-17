@@ -1,0 +1,59 @@
+Separar SQL de visão
+
+Para executar SQL, é necessário chamar uma função. Essa função devolve um array de objetos. Esse resultado é usado para gerar a visão.
+
+Com essa separação de modelo e visão, é possível gerar múltiplas visões para desktop e celulares.
+
+Instalar tabelas
+
+Remover tabelas
+
+
+Tabelas SQL
+
+PK = primary key
+F  = foreign key
+
+* usuario
+    PK id
+	PK nome
+	   email
+	   sal
+	   senha
+
+* tipo_de_conta
+    PK id
+	   nome
+	   sinal
+	   
+* conta
+    PK id
+	F  id_usuario
+	F  id_tipo_de_conta
+	   nome
+
+* transacao
+	PK id
+	F  id_usuario
+	   valor
+	   data_criada
+	F  debito
+	F  credito
+	   descricao
+
+
+Alexie Beans tem
+
+account       (id, user_id, account_type, name)  (4)
+account_type  (id, name, sign)  (3)
+transaction   (id, user_id, amount, created,
+               debit, credit, description)  (7)
+user          (id, username, email, salt, password_hash)  (5)
+               PK id, username
+
+Não usar:
+account_group 
+account_group_assoc
+currency
+settings
+
