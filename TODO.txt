@@ -17,25 +17,25 @@ Tabelas SQL
 PK = primary key
 F  = foreign key
 
-* usuario
+* plancont_usuario
     PK id
 	PK nome
 	   email
 	   sal
 	   senha
 
-* tipo_de_conta
+* plancont_tipo_de_conta
     PK id
 	   nome
 	   sinal
 	   
-* conta
+* plancont_conta
     PK id
 	F  id_usuario
 	F  id_tipo_de_conta
 	   nome
 
-* transacao
+* plancont_transacao
 	PK id
 	F  id_usuario
 	   valor
