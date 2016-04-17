@@ -61,4 +61,16 @@ constraint fk_transacao_credito foreign key (credito)
 references plancont_conta(id))
 engine=InnoDB");
 
+// Inserir tipos de contas
+try {
+  $dbh->exec("insert into plancont_tipo_de_conta (id, nome, sinal)
+    values(1, 'Bens', 1),
+(2, 'Despesas', 1),
+(3, 'Obrigações', -1),
+(4, 'Receitas', -1),
+(5, 'Patrimônio líquido', -1)");
+} catch (PDOException $e) {
+  die($e->getMessage());
+}
+
 ?>

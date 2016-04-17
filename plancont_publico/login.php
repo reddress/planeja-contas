@@ -9,7 +9,7 @@ if ($login_status) {
   Bem-vindo!<br>
   <a href="index.php">Página principal</a><?php
 } else {
-                                          ?>
+?>  
     Senha incorreta ou usuário não encontrado.<br>
     <a href="login_form.php">Tentar novamente</a>
 <?php

@@ -1,3 +1,5 @@
+* Validar nomes e não permitir valores em branco.
+
 ID do usuário é usado para validar acesso a contas e transações. Cada conta e transação tem uma coluna com o id do usuário. Este número é acessado pelo variável $_SESSION['id_usuario'].
 
 Separar SQL de visão
