@@ -1,3 +1,5 @@
+ID do usuário é usado para validar acesso a contas e transações. Cada conta e transação tem uma coluna com o id do usuário. Este número é acessado pelo variável $_SESSION['id_usuario'].
+
 Separar SQL de visão
 
 Para executar SQL, é necessário chamar uma função. Essa função devolve um array de objetos. Esse resultado é usado para gerar a visão.
