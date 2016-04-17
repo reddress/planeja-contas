@@ -1,8 +1,8 @@
 <?php
-require_once("publico/cabecalho.php");
+require_once(__DIR__ . "/../plancont_publico/cabecalho.php");
 
 // Criar tabelas
-require_once("publico/db.php");
+require_once(__DIR__ . "/../plancont_modelos/db.php");
 
 function criar_tabela($dbh, $nome, $sql) {
   try {
@@ -18,7 +18,6 @@ criar_tabela($dbh, "plancont_usuario",
 (id int not null auto_increment,
 nome varchar(64) not null,
 email varchar(80) not null,
-sal varchar(20) not null,
 senha varchar(64) not null,
 constraint pk_usuario_id primary key (id, nome))
 engine=InnoDB");
