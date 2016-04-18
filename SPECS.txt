@@ -1,0 +1,39 @@
+ID do usuário é usado para validar acesso a contas e transações. Cada conta e transação tem uma coluna com o id do usuário. Este número é acessado pelo variável $_SESSION['id_usuario'].
+
+SQL é separado da visão
+
+Para executar SQL, é necessário chamar uma função. Esta função devolve um array de arrays associativos. Este resultado é usado na visão.
+
+Com essa separação de modelo e visão, é possível gerar múltiplas visões para desktop e mobile.
+
+Tabelas SQL
+
+PK = primary key
+F  = foreign key
+
+* plancont_usuario
+    PK id
+	PK nome
+	   email
+	   sal
+	   senha
+
+* plancont_tipo_de_conta
+    PK id
+	   nome
+	   sinal
+	   
+* plancont_conta
+    PK id
+	F  id_usuario
+	F  id_tipo_de_conta
+	   nome
+
+* plancont_transacao
+	PK id
+	F  id_usuario
+	   valor
+	   data_criada
+	F  debito
+	F  credito
+	   descricao

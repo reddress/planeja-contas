@@ -18,7 +18,7 @@ criar_tabela($dbh, "plancont_usuario",
 (id int not null auto_increment,
 nome varchar(64) not null,
 email varchar(80) not null,
-senha varchar(64) not null,
+senha varchar(255) not null,
 constraint pk_usuario_id primary key (id))
 engine=InnoDB");
 
@@ -36,6 +36,7 @@ criar_tabela($dbh, "plancont_conta",
 id_usuario int not null,
 id_tipo_de_conta int not null,
 nome varchar(80) not null,
+saldo int not null,
 constraint pk_conta_id primary key (id),
 constraint fk_conta_usuario foreign key (id_usuario)
 references plancont_usuario (id),

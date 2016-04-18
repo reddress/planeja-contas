@@ -1,9 +1,11 @@
 <?php
 
+session_start();
+
 require_once("cabecalho.php");
 
 ?>
-<form action="criar_conta.php" method="POST">
+<form action="criar_usuario.php" method="POST">
   Nome do usuário: <input type="text" name="nome">
   <br>
   Email: <input type="text" name="email">
