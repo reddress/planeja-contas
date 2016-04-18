@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../plancont_publico/cabecalho.php");
+require_once(__DIR__ . "/../plancont_visoes_multipaginas/cabecalho.php");
 
 // Criar tabelas
 require_once("db.php");
