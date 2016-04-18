@@ -5,3 +5,9 @@
 * Remover as quatro tabelas "plancont_*"
 
 * Editar nome e informações de contas e transações
+
+Single-page App
+
+* Usar modal para Nova conta e Nova transações
+
+* Link para "Todas contas" para ver últimas transações, id_conta=0
