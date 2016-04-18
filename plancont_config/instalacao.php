@@ -2,7 +2,7 @@
 require_once(__DIR__ . "/../plancont_publico/cabecalho.php");
 
 // Criar tabelas
-require_once(__DIR__ . "/../plancont_modelos/db.php");
+require_once("db.php");
 
 function criar_tabela($dbh, $nome, $sql) {
   try {

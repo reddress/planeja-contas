@@ -1,6 +1,6 @@
 <?php
 
-require_once("db.php");
+require_once(__DIR__ . "/../plancont_config/db.php");
 
 if (!validar_usuario()) {  
   die("Contas: Operação não autorizada.");

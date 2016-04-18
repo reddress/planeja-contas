@@ -1,6 +1,6 @@
 <?php
 
-require_once("db.php");
+require_once(__DIR__ . "/../plancont_config/db.php");
 
 function adicionar_usuario($dbh, $nome, $email, $senha) {
   $find_sql = "select nome from plancont_usuario where nome = :nome";
