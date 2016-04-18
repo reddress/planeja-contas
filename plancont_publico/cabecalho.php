@@ -8,10 +8,10 @@ function navbar($dbh) {
   echo <<<_END
       $nome_do_usuario |
       
+      <a href="saldos.php">Saldos</a> |
+      <a href="ultimas_transacoes.php">Últimas transações</a> |      
       <a href="adicionar_conta_form.php">Nova conta</a> |
       <a href="adicionar_transacao_form.php">Nova transação</a> |
-      <a href="ultimas_transacoes.php">Últimas transações</a> |      
-      <a href="saldos.php">Saldos</a> |
       
       <a href="sair.php">Sair</a>
       <br><br>

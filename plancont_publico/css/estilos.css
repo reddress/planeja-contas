@@ -1,3 +1,8 @@
 .alinhar_a_direita {
     text-align: right;
 }
+
+.saldos_de_tipo {
+    float: left;
+    margin-right: 20px;
+}

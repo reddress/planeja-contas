@@ -1,8 +1,6 @@
-* Link (ou interface) para transacoes_da_conta.php
-
-* Lista de saldos de todas as contas (ordenados primeiramente por tipo de conta). order by id_tipo_de_conta, nome. Depois de executar, use foreach ($stmt as $row) e popule um mapa $contas_do_tipo[$id_tipo_de_conta]
-
 * Validar nomes e não permitir valores em branco
+
+* Evitar criar contas do mesmo tipo e nome
 
 * Remover as quatro tabelas "plancont_*"
 

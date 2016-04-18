@@ -31,7 +31,7 @@ function adicionar_transacao($dbh, $valor, $data_criada, $debito, $credito, $des
 }
 
 function lista_ultimas_transacoes($dbh, $quantidade = 30) {
-  $select_sql = "select date_format(t.data_criada, '%Y-%m-%d %H:%i') as data_criada, t.valor, t.descricao, debito.nome as debito, credito.nome as credito
+  $select_sql = "select date_format(t.data_criada, '%Y-%m-%d %H:%i') as data_criada, t.valor, t.descricao, debito.nome as debito, credito.nome as credito, t.debito as id_debito, t.credito as id_credito
 from plancont_transacao t
 inner join plancont_conta debito on t.debito = debito.id
 inner join plancont_conta credito on t.credito = credito.id
@@ -50,7 +50,7 @@ order by data_criada desc, valor desc limit :quantidade";
 }
 
 function lista_transacoes_da_conta($dbh, $id_conta, $quantidade = 30, $data_inicial = "2000-01-01", $data_final = "2100-01-01") {
-  $select_sql = "select date_format(t.data_criada, '%Y-%m-%d %H:%i') as data_criada, t.valor, t.descricao, debito.nome as debito, credito.nome as credito
+  $select_sql = "select date_format(t.data_criada, '%Y-%m-%d %H:%i') as data_criada, t.valor, t.descricao, debito.nome as debito, credito.nome as credito, t.debito as id_debito, t.credito as id_credito
 from plancont_transacao t
 inner join plancont_conta debito on t.debito = debito.id
 inner join plancont_conta credito on t.credito = credito.id

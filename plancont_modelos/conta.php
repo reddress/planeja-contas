@@ -89,4 +89,27 @@ function creditar($dbh, $id_conta, $valor) {
   debitar($dbh, $id_conta, -$valor);
 }
 
+$nomes_de_tipo_de_conta = [
+  1 => "Bens",
+  2 => "Despesas",
+  3 => "Obrigações",
+  4 => "Receitas",
+  5 => "Patrimônio líquido", 
+];
+
+function todas_contas($dbh) {
+  $select_sql = "select id_tipo_de_conta, id, nome, saldo from plancont_conta
+  where id_usuario = :id_usuario
+order by id_tipo_de_conta, nome";
+
+  try {
+    $stmt = $dbh->prepare($select_sql);
+    $stmt->execute([":id_usuario" => $_SESSION["id_usuario"]]);
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC|PDO::FETCH_GROUP);
+  } catch (PDOException $e) {
+    die($e->getMessage());
+  }
+}
+
 ?>
