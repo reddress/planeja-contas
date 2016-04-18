@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../plancont_config/db_config_secreto.php");  // arquivo com informações de conexão 
+require_once("db_config_secreto.php");  // arquivo com informações de conexão 
 
 $dsn = "mysql:host=$dbhost;dbname=$dbname;charset=utf8";
 
