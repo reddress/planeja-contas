@@ -1,13 +1,11 @@
 <?php
-require_once(__DIR__ . "/../plancont_visoes_multipaginas/cabecalho.php");
 
-// Criar tabelas
 require_once("db.php");
 
 function criar_tabela($dbh, $nome, $sql) {
   try {
     $dbh->exec($sql);
-    println("Criando tabela $nome.");
+    print("Criando tabela $nome.\n");
   } catch (PDOException $e) {
     die($e->getMessage());
   }
