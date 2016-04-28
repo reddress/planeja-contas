@@ -6,6 +6,8 @@
 
 * Editar nome e informações de contas e transações
 
+* Criar UNIQUE no nome de usuário
+
 Single-page App
 
 * Usar modal para Nova conta e Nova transações
